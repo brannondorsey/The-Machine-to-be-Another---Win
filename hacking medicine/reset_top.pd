@@ -1,0 +1,39 @@
+#N canvas 0 0 667 669 10;
+#X obj -126 -251 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -105 -251 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -177 -273 moses 355;
+#X obj -115 -274 moses 5;
+#X msg -94 -197 0;
+#X msg -122 -198 1;
+#X obj -95 -176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -123 -176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -95 -103 sendOSC;
+#X msg 130 -140 disconnect;
+#X msg -95 -131 send /enciende 0;
+#X msg -123 -155 send /enciende 1;
+#X obj 66 -140 loadbang;
+#X obj -122 -222 delay 1000;
+#X obj -177 -296 inlet;
+#X msg 66 -118 connect 10.0.0.5 7401;
+#X connect 0 0 4 0;
+#X connect 0 0 13 0;
+#X connect 1 0 4 0;
+#X connect 1 0 13 0;
+#X connect 2 1 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 10 0;
+#X connect 7 0 11 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 0;
+#X connect 11 0 8 0;
+#X connect 12 0 15 0;
+#X connect 13 0 5 0;
+#X connect 14 0 2 0;
+#X connect 14 0 3 0;
+#X connect 15 0 8 0;
